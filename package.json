@@ -1,0 +1,23 @@
+{
+  "name": "dreamcoding-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ypyp66/dreamcoding-ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ypyp66/dreamcoding-ts/issues"
+  },
+  "homepage": "https://github.com/ypyp66/dreamcoding-ts#readme",
+  "dependencies": {
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}
