@@ -1,0 +1,101 @@
+:root {
+  --bg-main-color: #00000080;
+  --bg-accent-color: #2d2d2d;
+  --accent-color: #f64435;
+  --text-accent-color: #ffe498;
+  --text-edit-bg-color: #575757;
+  --border-color: #3f3f3f;
+  --shadow-color: #202020;
+  --document-bg-color: #68686850;
+  --component-bg-gradient: radial-gradient(
+    circle,
+    #646464e6 0%,
+    #363636e6 100%
+  );
+  --smokywhite: #dddbd8;
+  --black: #000000;
+  --translucent-black: #00000099;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  color: white;
+  background-image: url("../assets/background-210125-235634.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100%;
+  max-width: 1024px;
+
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  background-color: rgba(49, 49, 49, 0.5);
+  padding: 20px 0;
+}
+
+.header-btn-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+}
+
+.header-btn-container button {
+  padding: 10px 30px;
+  margin-right: 5px;
+
+  background-color: var(--smokywhite);
+  border: none;
+  border-radius: 10px;
+}
+
+.header-btn-container button:hover {
+  background-color: wheat;
+}
+
+.header-btn-container button:focus {
+  background-color: wheat;
+}
+
+main {
+  height: 100%;
+  background-color: var(--document-bg-color);
+
+  overflow-y: scroll;
+  scrollbar-width: 6px;
+  scrollbar-color: var(--bg-accent-color);
+  scrollbar-face-color: var(--accent-color);
+}
+
+footer {
+  background-color: var(--shadow-color);
+}
