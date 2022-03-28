@@ -1,7 +1,8 @@
 // export class PageComponent {
 //   private element: HTMLUListElement; //타입은 ul태그
 
-import { BaseComponent } from "./BaseComponent";
+import { BaseComponent, Component } from "./BaseComponent";
+import { PageItemComponent } from "./PageItem";
 
 //   constructor() {
 //     this.element = document.createElement("ul"); //element 변수는 ul태그를 가짐
@@ -45,6 +46,19 @@ export class PageComponent extends BaseComponent<HTMLUListElement> {
    2. element를 기준 element의 자식으로 붙여야함
    */
   constructor() {
-    super("<ul class='page'>This is Test</ul>");
+    super("<ul class='page'></ul>"); // === this.element
+  }
+
+  addChild(section: Component) {
+    const item = new PageItemComponent();
+
+    console.log(this.element, item);
+    item.addChild(section); // <ul>에다 받아온 htmlString을 자식으로 넣어줌
+    item.attachTo(this.element, "beforeend"); //ul.page에 item에 해당하는 class의 this.element를 넣음
+    //item에 해당하는 class의 메소드이기 때문에 attachTo()를 실행하면 해당 class의 멤버 메소드가 되므로
+    //this는 해당 class를 가르킴
+    item.setOnCloseListener(() => {
+      item.removeFrom(this.element);
+    });
   }
 }

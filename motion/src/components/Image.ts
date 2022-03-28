@@ -38,20 +38,20 @@ export class ImageComponent extends BaseComponent<HTMLElement> {
   constructor(src: string, alt: string) {
     super(`
     <section class="image">
-      <p class="image_title"></p>
-      <div class="image_holder"><img class="image_thumbnail"></div>
+      <div class="image__holder"><img class="image__thumbnail"></div>
+      <h2 class="page-item__title image__title"></h2>
     </section>
     `);
 
     const imageElement = this.element.querySelector(
-      ".image_thumbnail"
+      ".image__thumbnail"
     ) as HTMLImageElement;
 
     imageElement.src = src;
     imageElement.alt = alt;
 
     const titleElement = this.element.querySelector(
-      ".image_title"
+      ".image__title"
     ) as HTMLParagraphElement;
 
     titleElement.textContent = "Title";
